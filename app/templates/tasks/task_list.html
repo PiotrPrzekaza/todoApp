@@ -1,6 +1,6 @@
 <h1>Do zrobienia</h1>
 
-<form method="post" action="/">
+<form method="POST" action="/">
     {% csrf_token %}
     {{ form.title }}
     <input type="submit" name="addTask">
