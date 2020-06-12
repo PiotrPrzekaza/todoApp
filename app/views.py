@@ -30,7 +30,6 @@ def updateTask(request, key):
             return redirect('/')
 
     context = {'form': form}
-
     return render(request, 'tasks/task_update.html', context)
 
 
