@@ -1,7 +1,47 @@
-<h1>Aktualizuj zadania</h1>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<style>
+    body{
+        background-color: #fdfde4;
+        font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    }
+    h1{
+        text-align: center;
+    }
 
-<form method="POST" action="">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" name="Task Update">
-</form>
+    .card-center{
+        width: 60%;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #e0e0e0;
+        border-radius: 10px;
+        box-shadow: 6px 2px 30px 0px rgba(0,0,0,0.75);
+    }
+    .item-row{
+        background-color: #ffffff;
+        text-align: center;
+        margin: 20px 100px;
+        padding: 20px;
+        border-radius: 10px;
+        font-size: 16px;
+        box-shadow: 0px -1px 10px -4px rgba(0,0,0,0.75);
+    }
+    .form-body{
+        margin: 20px 10px;
+    }
+
+</style>
+
+<div class="card-center">
+    <div class="card-header" >
+       <h1>Aktualizuj zadania</h1>
+    </div>
+
+    <div class="item-row" >
+        <form class="form-body" method="POST" action="">
+            {% csrf_token %}
+            {{ form }}
+            <input class="btn btn-outline-info" value="Aktualizuj" type="submit" name="Task Update">
+        </form>
+    </div>
+
+</div>
