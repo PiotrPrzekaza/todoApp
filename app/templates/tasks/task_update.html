@@ -1,5 +1,7 @@
 <h1>Aktualizuj zadania</h1>
 
 <form action="">
-    <input type="submit" name="TaskUpdate">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" name="Task Update">
 </form>
